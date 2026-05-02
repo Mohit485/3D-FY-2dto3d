@@ -1,2 +1,98 @@
-# 3D-FY-2dto3dconverter
-AI Driven 2d videos to 3d stereoscopic visuals conversion using MiDaS PyTorch Model.
+# 3D- FY : AI Driven 2D to 3D Converter
+Convert any standard 2D video into immersive 3D formats using monocular depth estimation. Outputs are ready for Red-Cyan glasses, VR headsets and 3D visualization — all running on a free Kaggle GPU.
+
+----------------------
+
+## What It Does
+
+This pipeline takes a regular 2D video as input and produces three outputs:
+
+- **Anaglyph** — Red-Cyan stereoscopic video viewable with 3D glasses
+- **Side-by-Side (SBS)** — Dual-view format compatible with VR headsets 
+  like Meta Quest and Google Cardboard
+- **Depth Map** — Color-coded visualization of scene depth estimated by AI
+-----------------------
+  ## How It Works
+Input Video → Frame Extraction → MiDaS Depth Estimation → Pixel Shifting → Stereoscopic Synthesis → Output Video
+
+1. Each frame is passed through **MiDaS DPT-Hybrid**, a transformer-based 
+   monocular depth estimation model by Intel ISL
+2. The depth map is used to horizontally shift pixels — close objects shift 
+   more, far objects shift less — simulating the parallax seen by human eyes
+3. Left and right eye views are composited into Anaglyph or SBS format
+4. Temporal smoothing via exponential moving average reduces depth 
+   flickering between frames
+5. Original audio is preserved using ffmpeg
+-------------------------
+
+## Tech Stack
+
+| Tool | Purpose |
+|---|---|
+| MiDaS DPT-Hybrid | Monocular depth estimation |
+| PyTorch | Model inference |
+| OpenCV | Frame read/write, color mapping |
+| NumPy | Vectorized pixel shifting |
+| Open3D | Point cloud generation |
+| Gradio | Interactive web interface |
+| ffmpeg | Audio preservation |
+| Kaggle T4 GPU | Free compute |
+
+---------------------------
+## Run It Yourself
+
+This project is designed to run on **Kaggle Notebooks** with a free T4 GPU.
+
+1. Go to [kaggle.com](https://kaggle.com) and create a free account
+2. Create a new notebook and enable GPU: 
+   `Settings → Accelerator → GPU T4`
+3. Upload your video using `Add Data → Upload`
+4. Copy each cell from the notebook in order and run them sequentially
+5. Download outputs from `/kaggle/working/output/`
+
+---------------------------
+## Research Paper
+
+This project is accompanied by a research survey paper titled:
+
+**"Lightweight 2D-to-3D Video Conversion Pipeline Using Monocular Depth 
+Estimation for Student and Independent Creator Accessibility"**
+
+The paper covers depth estimation history, pipeline formalization with 
+mathematical notation, comparison with existing tools like StereoCrafter 
+and VisionDepth3D, and proposes a training-free occlusion hole-filling 
+method as a lightweight alternative to diffusion-based approaches.
+
+Status: Preparing for IEEE/Scopus conference submission
+
+-----------------------------
+
+## Limitations and Future Scope
+
+- Depth estimation is relative, not metric — transparent surfaces and 
+  fast motion create artifacts
+- Occlusion hole filling using depth-guided inpainting is under active 
+  development (see `hole_filling` branch)
+- Temporal consistency currently uses EMA smoothing — proper video-aware 
+  depth models are identified as future work
+- Real-time inference requires model optimization (TensorRT, ONNX export)
+
+-----------------------------
+## Author
+
+**Mohit Aditya**  
+B.Tech Artificial Intelligence and Machine Learning  
+JB Institute of Technology, Dehradun  
+[LinkedIn](https://linkedin.com/in/yourprofile) · 
+[GitHub](https://github.com/yourusername)
+
+-----------------------------
+
+## Acknowledgements
+
+- [MiDaS](https://github.com/isl-org/MiDaS) by Intel ISL for the depth 
+  estimation model
+- [StereoCrafter](https://github.com/TencentARC/StereoCrafter) paper for 
+  establishing the problem benchmark
+- Kaggle for free GPU compute
+
