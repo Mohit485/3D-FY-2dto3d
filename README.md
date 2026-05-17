@@ -1,16 +1,10 @@
-# 3D- FY : AI Driven 2D to 3D Converter
+# 🎬 3D-FY — AI-Powered 2D to 3D Video Converter
 Convert any standard 2D video into immersive 3D formats using monocular depth estimation. Outputs are ready for Red-Cyan glasses, VR headsets and 3D visualization — all running on a free Kaggle GPU.
 
-----------------------
+-----
+# Sample Output
+| original 2D
 
-## What It Does
-
-This pipeline takes a regular 2D video as input and produces three outputs:
-
-- **Anaglyph** — Red-Cyan stereoscopic video viewable with 3D glasses
-- **Side-by-Side (SBS)** — Dual-view format compatible with VR headsets 
-  like Meta Quest and Google Cardboard
-- **Depth Map** — Color-coded visualization of scene depth estimated by AI
 -----------------------
   ## How It Works
 Input Video → Frame Extraction → MiDaS Depth Estimation → Pixel Shifting → Stereoscopic Synthesis → Output Video
@@ -24,7 +18,13 @@ Input Video → Frame Extraction → MiDaS Depth Estimation → Pixel Shifting �
    flickering between frames
 5. Original audio is preserved using ffmpeg
 -------------------------
+## 🖥️ Interface
 
+The project includes a Gradio web interface that runs on Kaggle GPU and generates
+a public link accessible from any device — no local GPU needed.
+
+![interface screenshot](assets/interface.png)
+--------------------------
 ## Tech Stack
 
 | Tool | Purpose |
@@ -48,22 +48,18 @@ This project is designed to run on **Kaggle Notebooks** with a free T4 GPU.
    `Settings → Accelerator → GPU T4`
 3. Upload your video using `Add Data → Upload`
 4. Copy each cell from the notebook in order and run them sequentially
-5. Download outputs from `/kaggle/working/output/`
-
+5. For manual mode: set `VIDEO_PATH` and run the processing cell
+6. For interface mode: run the Gradio cell, open the public link printed in output
+7. Download outputs from `/kaggle/working/output/`
 ---------------------------
-## Research Paper
+## 📤 Output Formats
 
-This project is accompanied by a research survey paper titled:
+|    Format    |           View With                  |      Use Case           |
+|--------------|--------------------------------------|-------------------------|
+|   Anaglyph   |       Red-Cyan 3D glasses            | Cinema, presentations   |
+| Side-by-Side | VR headset (Meta Quest, Cardboard)   | Immersive VR viewing    |
+|   Depth Map  |          Any player                  | Visualization, debugging|
 
-**"Lightweight 2D-to-3D Video Conversion Pipeline Using Monocular Depth 
-Estimation for Student and Independent Creator Accessibility"**
-
-The paper covers depth estimation history, pipeline formalization with 
-mathematical notation, comparison with existing tools like StereoCrafter 
-and VisionDepth3D, and proposes a training-free occlusion hole-filling 
-method as a lightweight alternative to diffusion-based approaches.
-
-Status: Preparing for IEEE/Scopus conference submission
 
 -----------------------------
 
