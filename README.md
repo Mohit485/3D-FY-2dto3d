@@ -23,7 +23,7 @@ Input Video → Frame Extraction → MiDaS Depth Estimation → Pixel Shifting �
 The project includes a Gradio web interface that runs on Kaggle GPU and generates
 a public link accessible from any device — no local GPU needed.
 
-![interface screenshot](assets/interface.png)
+![interface screenshot](assets/interface_ss.png)
 --------------------------
 ## Tech Stack
 
