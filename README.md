@@ -33,7 +33,6 @@ a public link accessible from any device — no local GPU needed.
 | PyTorch | Model inference |
 | OpenCV | Frame read/write, color mapping |
 | NumPy | Vectorized pixel shifting |
-| Open3D | Point cloud generation |
 | Gradio | Interactive web interface |
 | ffmpeg | Audio preservation |
 | Kaggle T4 GPU | Free compute |
@@ -49,8 +48,8 @@ This project is designed to run on **Kaggle Notebooks** with a free T4 GPU.
 3. Upload your video using `Add Data → Upload`
 4. Copy each cell from the notebook in order and run them sequentially
 5. For manual mode: set `VIDEO_PATH` and run the processing cell
-6. For interface mode: run the Gradio cell, open the public link printed in output
-7. Download outputs from `/kaggle/working/output/`
+6. Download outputs from `/kaggle/working/output/`
+7. For interface mode: run the Gradio cell, open the public link printed in output
 ---------------------------
 ## 📤 Output Formats
 
@@ -68,7 +67,7 @@ This project is designed to run on **Kaggle Notebooks** with a free T4 GPU.
 - Depth estimation is relative, not metric — transparent surfaces and 
   fast motion create artifacts
 - Occlusion hole filling using depth-guided inpainting is under active 
-  development (see `hole_filling` branch)
+  development 
 - Temporal consistency currently uses EMA smoothing — proper video-aware 
   depth models are identified as future work
 - Real-time inference requires model optimization (TensorRT, ONNX export)
