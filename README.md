@@ -3,8 +3,7 @@ Convert any standard 2D video into immersive 3D formats using monocular depth es
 
 -----
 # Sample Output
-| ![original] |
-(assets/original.gif) | 
+| ![original](assets/Original.gif) | 
 
 -----------------------
   ## How It Works
