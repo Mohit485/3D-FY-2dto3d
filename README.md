@@ -3,7 +3,7 @@ Convert any standard 2D video into immersive 3D formats using monocular depth es
 
 -----
 # Sample Output
-| ![original](assets/Original.gif) | 
+| ![input - anaglyph comparison](assets/Original.gif) |  ![input - depth comparison](assets/narcomp.gif) 
 
 -----------------------
   ## How It Works
