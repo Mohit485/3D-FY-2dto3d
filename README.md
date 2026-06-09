@@ -80,13 +80,24 @@ This project is designed to run on **Kaggle Notebooks** with a free T4 GPU.
 - Real-time inference requires model optimization (TensorRT, ONNX export)
 
 -----------------------------
+
+## 📄 Research Paper
+
+This project is accompanied by a research survey paper covering the history of
+depth estimation, stereoscopic synthesis methods, and comparison of existing pipelines.
+
+> Paper title: * 3D-Fy: AI-Based 2D to 3D Video Conversion Using Monocular Depth Estimation*
+> Status: Under preparation for IEEE conference submission
+
+---
+
 ## Author
 
 **Mohit Aditya**  
 B.Tech Artificial Intelligence and Machine Learning  
 JB Institute of Technology, Dehradun  
-[LinkedIn](https://linkedin.com/in/yourprofile) · 
-[GitHub](https://github.com/yourusername)
+[LinkedIn](www.linkedin.com/in/mohit-aditya-55506b255) · 
+[GitHub](https://github.com/Mohit485/3D-FY-2dto3d/edit/main/README.md))
 
 -----------------------------
 
