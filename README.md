@@ -5,7 +5,7 @@ Convert any standard 2D video into immersive 3D formats using monocular depth es
 
 View and run the complete project on Kaggle:
 
-🔗[your-notebook-link](https://www.kaggle.com/code/mohiadiy/3d-fy-ai-driven-2d-to-3d-converter/edit)
+🔗[3D-fy-Kaggle-notebook-link](https://www.kaggle.com/code/mohiadiy/3d-fy-ai-driven-2d-to-3d-converter/edit)
 
 -----
 # Sample Output
