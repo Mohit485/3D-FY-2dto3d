@@ -97,7 +97,7 @@ depth estimation, stereoscopic synthesis methods, and comparison of existing pip
 B.Tech Artificial Intelligence and Machine Learning  
 JB Institute of Technology, Dehradun  
 [LinkedIn](https://www.linkedin.com/in/mohit-aditya-55506b255/) 
-[GitHub](https://github.com/Mohit485/3D-FY-2dto3d/edit/main/README.md)
+[GitHub](https://github.com/Mohit485)
 
 -----------------------------
 
