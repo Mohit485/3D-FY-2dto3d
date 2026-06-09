@@ -1,6 +1,12 @@
 # 🎬 3D-FY — AI-Powered 2D to 3D Video Converter
 Convert any standard 2D video into immersive 3D formats using monocular depth estimation. Outputs are ready for Red-Cyan glasses, VR headsets and 3D visualization — all running on a free Kaggle GPU.
 
+## Kaggle Notebook
+
+View and run the complete project on Kaggle:
+
+🔗[your-notebook-link](https://www.kaggle.com/code/mohiadiy/3d-fy-ai-driven-2d-to-3d-converter/edit)
+
 -----
 # Sample Output
 | ![input - anaglyph comparison](assets/Original.gif) |  ![input - depth comparison](assets/narcomp.gif) 
