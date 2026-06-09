@@ -9,7 +9,7 @@ View and run the complete project on Kaggle:
 
 -----
 # Sample Output
-| ![input - anaglyph comparison](assets/Original.gif) |  ![input - depth comparison](assets/narcomp.gif) 
+| ![input - anaglyph comparison](assets/Original.gif) |  | ![input - depth comparison](assets/narcomp.gif) |
 
 -----------------------
   ## How It Works
