@@ -11,6 +11,7 @@ View and run the complete project on Kaggle:
 # Sample Output
 | ![input - anaglyph comparison](assets/Original.gif) |  
 | ![input - depth comparison](assets/narcomp.gif) |
+#Side By Side 
 | ![input - sbs](assets/sbs.gif) |
 -----------------------
   ## How It Works
